@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>ServiceNow Developer Portfolio</title>
+
+		<!-- Link to Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600&display=swap"
+			rel="stylesheet"
+		/>
+		<script>
+			document.querySelectorAll(".read-more").forEach((button) => {
+				button.addEventListener("click", () => {
+					const card = button.parentElement;
+					card.classList.toggle("active"); // Toggle active class to show/hide project details
+				});
+			});
+			const timelineItems = document.querySelectorAll(".timeline-item");
+
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.style.opacity = 1; // Fade in
+						entry.target.style.transform = "translateX(0)"; // Move to original position
+						observer.unobserve(entry.target); // Stop observing after fade-in
+					}
+				});
+			});
+
+			timelineItems.forEach((item) => {
+				observer.observe(item); // Observe each timeline item
+			});
+		</script>
+		<!-- Basic CSS -->
+		<head>
+			<link rel="stylesheet" href="style.css" />
+		</head>
+	</head>
+	<body>
+		<!-- Hero Section -->
+		<section class="hero-section">
+			<div class="hero-content">
+				<h1 class="hero-heading">
+					Aditya | ServiceNow Developer | 2+ Years of Experience
+				</h1>
+				<p class="hero-subtext">
+					ITSM | CSA | CAD | CSM | 7x Micro Certifications | ServiceNow.
+				</p>
+				<div class="hero-buttons">
+					<!-- Links to various sections -->
+					<a href="#about" class="btn-hero">About Me</a>
+					<a href="#skills" class="btn-hero">Skills</a>
+					<a href="#projects" class="btn-hero">Projects</a>
+					<a href="#timeline" class="btn-hero">Experience</a>
+					<a href="#contact" class="btn-hero">Get in Touch</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- About Me Section -->
+		<section class="about-section" id="about">
+			<div class="about-content">
+				<h2>About Me</h2>
+				<p>
+					I'm a ServiceNow developer with a passion for scripting and extensive
+					experience in the ITSM module. I have a knack for delivering client
+					demos that showcase the full capabilities of the platform. Let me help
+					you streamline your business processes and take your ServiceNow
+					experience to the next level!.
+				</p>
+			</div>
+			<div class="about-image">
+				<img src="your-image-url.jpg" alt="Developer Image" />
+			</div>
+		</section>
+
+		<!-- Skills & Technologies Section -->
+		<section class="skills-section" id="skills">
+			<div class="skills-content">
+				<h2>Skills & Technologies</h2>
+				<div class="skills-grid">
+					<div class="skill-item">
+						<i class="skill-icon">🛠️</i>
+						<h3>ServiceNow Flow Designer</h3>
+						<div class="progress-bar">
+							<div class="progress" style="width: 90%"></div>
+						</div>
+					</div>
+					<div class="skill-item">
+						<i class="skill-icon">💻</i>
+						<h3>JavaScript</h3>
+						<div class="progress-bar">
+							<div class="progress" style="width: 85%"></div>
+						</div>
+					</div>
+					<div class="skill-item">
+						<i class="skill-icon">🌐</i>
+						<h3>REST APIs</h3>
+						<div class="progress-bar">
+							<div class="progress" style="width: 80%"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Project Portfolio Section -->
+		<section class="projects-section" id="projects">
+			<div class="projects-content">
+				<h2>Project Portfolio</h2>
+				<div class="projects-grid">
+					<div class="project-card">
+						<h3>Project 1</h3>
+						<p>
+							Developed a workflow automation for incident management in
+							ServiceNow.
+						</p>
+						<a href="https://github.com/yourusername/project1" target="_blank"
+							>View on GitHub</a
+						>
+						<button class="read-more">Read More</button>
+						<div class="project-details">
+							<p>Detailed description of Project 1...</p>
+						</div>
+					</div>
+					<div class="project-card">
+						<h3>Project 2</h3>
+						<p>
+							Created a custom application to manage employee onboarding
+							processes.
+						</p>
+						<a href="https://github.com/yourusername/project2" target="_blank"
+							>View on GitHub</a
+						>
+						<button class="read-more">Read More</button>
+						<div class="project-details">
+							<p>Detailed description of Project 2...</p>
+						</div>
+					</div>
+					<div class="project-card">
+						<h3>Project 3</h3>
+						<p>
+							Integrated third-party APIs to enhance ServiceNow functionalities.
+						</p>
+						<a href="https://github.com/yourusername/project3" target="_blank"
+							>View on GitHub</a
+						>
+						<button class="read-more">Read More</button>
+						<div class="project-details">
+							<p>Detailed description of Project 3...</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Experience Timeline Section -->
+		<section class="timeline-section" id="timeline">
+			<div class="timeline-content">
+				<h2>Experience Timeline</h2>
+				<div class="timeline">
+					<div class="timeline-item">
+						<div class="timeline-marker"></div>
+						<div class="timeline-details">
+							<h3>ServiceNow Developer</h3>
+							<p><strong>Company Name</strong> - January 2022 - Present</p>
+							<p>
+								Worked on various ServiceNow projects, focusing on workflow
+								automation and system integrations.
+							</p>
+						</div>
+					</div>
+					<div class="timeline-item">
+						<div class="timeline-marker"></div>
+						<div class="timeline-details">
+							<h3>Junior Developer</h3>
+							<p>
+								<strong>Previous Company</strong> - June 2020 - December 2021
+							</p>
+							<p>
+								Assisted in developing and maintaining ServiceNow applications,
+								contributing to overall project success.
+							</p>
+						</div>
+					</div>
+					<div class="timeline-item">
+						<div class="timeline-marker"></div>
+						<div class="timeline-details">
+							<h3>Intern</h3>
+							<p>
+								<strong>Internship Company</strong> - January 2020 - May 2020
+							</p>
+							<p>
+								Gained experience in application development and system support.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact Section -->
+		<section class="contact-section" id="contact">
+			<div class="contact-content">
+				<h2>Contact Me</h2>
+				<form class="contact-form">
+					<input type="text" placeholder="Your Name" required />
+					<input type="email" placeholder="Your Email" required />
+					<textarea rows="5" placeholder="Your Message" required></textarea>
+					<input type="url" placeholder="LinkedIn or GitHub URL (Optional)" />
+					<button type="submit" class="cta-button">Send Message</button>
+				</form>
+			</div>
+			<footer class="social-footer">
+				<h3>Connect with me:</h3>
+				<div class="social-icons">
+					<a
+						href="https://www.linkedin.com/in/yourusername"
+						target="_blank"
+						class="social-icon"
+						>LinkedIn</a
+					>
+					<a
+						href="https://github.com/yourusername"
+						target="_blank"
+						class="social-icon"
+						>GitHub</a
+					>
+					<a
+						href="https://twitter.com/yourusername"
+						target="_blank"
+						class="social-icon"
+						>Twitter</a
+					>
+				</div>
+			</footer>
+		</section>
+	</body>
+</html>
